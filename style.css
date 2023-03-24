@@ -14,13 +14,18 @@
   --ff-primary: "Overpass", sans-serif;
   --ff-secondary: "Ubuntu", sans-serif;
 
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 3.7rem;
 
-  --container-width: 700px;
+  --fw-light: 300;
+  /* --fw-regular: 400;
+  --fw-medium: 500; */
+  --fw-semibold: 600;
+  /* --fw-bold: 700; */
+
+  --container-width: 1050px;
 }
 
 /* Resets */
@@ -47,14 +52,40 @@ a {
 
 /* Utility */
 
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fw-light {
+  font-weight: var(--fw-light);
+}
+
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+
 .container {
   width: min(var(--container-width), 100%);
   margin-inline: auto;
+  border: 1px solid black;
 }
 
 .btn {
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 13px;
+  width: 125px;
+  border-radius: 30px;
   font-weight: var(--fw-semibold);
   background-color: var(--white);
 }
@@ -74,7 +105,81 @@ a {
 /* General styles */
 
 body {
+  font-size: 1rem;
   font-family: var(--ff-primary);
 }
 
 /* Header */
+
+.primary-header {
+  font-weight: var(--fw-semibold);
+  color: var(--white);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 2rem;
+}
+
+.primary-header .container {
+  display: flex;
+  align-items: center;
+}
+
+.primary-header a {
+  color: var(--white);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  margin-left: 3rem;
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.header-cta-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Hero */
+
+.hero {
+  color: var(--white);
+  background-color: var(--very-light-red);
+  /* padding: 10rem 0; */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .hero-img {
+  border: 1px solid black;
+  background-image: url("./images/bg-pattern-intro-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* top: -500px; */
+  height: 500px;
+  width: 500px;
+}
+
+.hero .container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero .hero-text {
+  margin-top: 200px;
+}
+
+.hero-cta-group {
+  z-index: 1;
+}
